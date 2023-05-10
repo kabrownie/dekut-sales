@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "918480176496",
+    "project_id": "dekut-sales",
+    "storage_bucket": "dekut-sales.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918480176496:android:e328e66f567ab05f2bbbb5",
+        "android_client_info": {
+          "package_name": "com.dekut.sales"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918480176496-q57nmc7f7745m4pncec59te8if702j3o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dekut.sales",
+            "certificate_hash": "30a9d9adafdee1b42c4e1089c88fc9cd247203b3"
+          }
+        },
+        {
+          "client_id": "918480176496-f57dc7o9e7ruoeokm5n9ghl50ngnc9lb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNZaVEFEYZr-WVSoNpe8EjLIbbSqHsPXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918480176496-f57dc7o9e7ruoeokm5n9ghl50ngnc9lb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
