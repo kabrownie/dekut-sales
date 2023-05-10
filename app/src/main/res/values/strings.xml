@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dekut Sales</string>
+    <string name="logo">logo</string>
+    <string name="dekut_sales">dekut sales</string>
+    <string name="sign_up">sign up</string>
+    <string name="email_label">email label</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="or_continue_with_google">or continue with google</string>
+</resources>
