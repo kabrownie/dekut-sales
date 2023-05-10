@@ -1,0 +1,12 @@
+user account
+    email / google
+    business/ personal
+    password /forgot password
+    follow
+    rating
+post goods / services
+availability of products
+chat
+location
+cart
+

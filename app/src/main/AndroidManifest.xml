@@ -14,6 +14,9 @@
         android:theme="@style/Theme.DekutSales"
         tools:targetApi="31">
         <activity
+            android:name=".myprofile"
+            android:exported="false" />
+        <activity
             android:name=".dashboard"
             android:exported="false" />
         <activity
