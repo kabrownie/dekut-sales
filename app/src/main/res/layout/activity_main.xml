@@ -43,7 +43,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/email_label"/>
+                android:text="@string/email"/>
 
             <EditText
                 android:id="@+id/editTextEmail"
@@ -72,6 +72,12 @@
                 android:ems="10"
                 android:inputType="textPassword"
                 android:autofillHints="" />
+            <CheckBox
+                android:id="@+id/show_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+            android:text="@string/show_password" />
 
             <Button
                 android:id="@+id/signup_button"
@@ -89,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:textSize="15dp"
                 android:text="@string/or_continue_with_google"/>
 
             <com.google.android.gms.common.SignInButton

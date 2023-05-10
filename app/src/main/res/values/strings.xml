@@ -7,4 +7,7 @@
     <string name="email">email</string>
     <string name="password">password</string>
     <string name="or_continue_with_google">or continue with google</string>
+    <string name="logout">Logout</string>
+    <string name="your_dp">your dp</string>
+    <string name="show_password">Show Password</string>
 </resources>
