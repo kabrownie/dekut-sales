@@ -55,6 +55,7 @@ public class Login extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
 
+
         // checking if user is null or not
         if (mAuth != null) {
             currentUser = mAuth.getCurrentUser();
@@ -132,16 +133,23 @@ public class Login extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 loadingBar.dismiss();
                 if (task.isSuccessful()) {
-                    Toast.makeText(Login.this, "Done sent", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Login.this, "reset email sent", Toast.LENGTH_LONG).show();
+                    TextView spam = findViewById(R.id.spam);
+                    spam.setVisibility(View.VISIBLE);
+                    spam.postDelayed(new Runnable() {
+                            public void run() {
+                                spam.setVisibility(View.INVISIBLE);
+                            }
+                        }, 20000);
                 } else {
-                    Toast.makeText(Login.this, "Error Occurred", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Login.this, "error Try Again", Toast.LENGTH_LONG).show();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 loadingBar.dismiss();
-                Toast.makeText(Login.this, "Error Failed", Toast.LENGTH_LONG).show();
+                Toast.makeText(Login.this, "Error try again", Toast.LENGTH_LONG).show();
             }
         });
     }

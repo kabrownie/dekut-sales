@@ -22,5 +22,7 @@
     <string name="login">Login</string>
     <string name="need_new_account_sign_up_here">Need new Account? Register Here</string>
     <string name="login_to_continue">Login to continue</string>
+    <string name="if_you_dont_receive_reset_email_consider_checking_the_spam">If you dont receive reset email, consider checking the spam</string>
+    <string name="a_user_with_that_email_already_exists">A user with that email already exists</string>
 
 </resources>

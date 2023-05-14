@@ -1,6 +1,9 @@
 about us web page
 donate
+ads
+
  our terms
+ support page
 user account
     email / google ..later
     verify email

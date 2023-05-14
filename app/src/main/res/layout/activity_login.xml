@@ -83,6 +83,14 @@
                 android:hint="@string/passwordH"
                 android:inputType="textPassword"
                 android:padding="8dp" />
+            <TextView
+                android:id="@+id/spam"
+                android:layout_marginStart="210dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:text="@string/if_you_dont_receive_reset_email_consider_checking_the_spam" />
 
             <TextView
                 android:id="@+id/forgetp"
