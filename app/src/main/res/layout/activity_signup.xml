@@ -105,8 +105,31 @@
                     android:background="#B22196F3"
                     android:hint="@string/passwordH"
                     android:inputType="textPassword"
-                    android:padding="8dp" />
+                    android:paddingStart="2sp"
+                    android:padding="8dp"
+                    tools:ignore="RtlSymmetry" />
+            <CheckBox android:id="@+id/checkbox_showPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/show_password" />
+            <LinearLayout   android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <CheckBox android:id="@+id/checkbox_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/agree_to_our"/>
+                <TextView
+                    android:id="@+id/terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/terms_and_conditions"
+                    />
 
+        </LinearLayout>
 
                 <Button
                     android:id="@+id/register_button"

@@ -9,9 +9,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,6 +26,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -54,6 +59,24 @@ public class Login extends AppCompatActivity {
         Button mlogin = findViewById(R.id.login_button);
         loadingBar = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
+        CheckBox showpass = findViewById(R.id.checkbox_showPass);
+
+        //show paass
+        showpass.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean value) {
+                if (value)
+                {
+                    // Show Password
+                    password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }
+                else
+                {
+                    // Hide Password
+                    password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
 
 
         // checking if user is null or not
@@ -138,10 +161,13 @@ public class Login extends AppCompatActivity {
                     spam.setVisibility(View.VISIBLE);
                     spam.postDelayed(new Runnable() {
                             public void run() {
-                                spam.setVisibility(View.INVISIBLE);
+                                spam.setVisibility(View.GONE);
                             }
                         }, 20000);
-                } else {
+                }
+
+
+                else {
                     Toast.makeText(Login.this, "error Try Again", Toast.LENGTH_LONG).show();
                 }
             }
@@ -149,6 +175,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 loadingBar.dismiss();
+
                 Toast.makeText(Login.this, "Error try again", Toast.LENGTH_LONG).show();
             }
         });
@@ -188,12 +215,17 @@ public class Login extends AppCompatActivity {
                         // storing the value in Firebase
                         reference.child(uid).setValue(hashMap);
                     }
+
+
                     Toast.makeText(Login.this, "Registered User " + user.getEmail(), Toast.LENGTH_LONG).show();
                     Intent mainIntent = new Intent(Login.this, dashboard.class);
                     mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(mainIntent);
                     finish();
-                } else {
+
+                }
+
+                else {
                     loadingBar.dismiss();
                     Toast.makeText(Login.this, "Login Failed", Toast.LENGTH_LONG).show();
                 }
@@ -202,7 +234,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 loadingBar.dismiss();
-                Toast.makeText(Login.this, "Error Occurred", Toast.LENGTH_LONG).show();
+
+                Toast.makeText(Login.this, "Login failed", Toast.LENGTH_LONG).show();
             }
         });
     }

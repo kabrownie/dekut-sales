@@ -2,18 +2,24 @@ about us web page
 donate
 ads
 
- our terms
+ our terms page
  support page
 user account
-    email / google ..later
+   \/ email /
+     google ..later
     verify email
     business/ personal
     password /forgot password
     follow
     rating
+    bio
+    verify accounts
+
 post goods / services
 availability of products
 chat
-location
+location /more unis?
+uni name
+
 cart
 
