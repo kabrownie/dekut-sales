@@ -3,11 +3,24 @@
     <string name="logo">logo</string>
     <string name="dekut_sales">dekut sales</string>
     <string name="sign_up">sign up</string>
-    <string name="email_label">email label</string>
-    <string name="email">email</string>
+    <string name="email">Email</string>
     <string name="password">password</string>
     <string name="or_continue_with_google">or continue with google</string>
     <string name="logout">Logout</string>
     <string name="your_dp">your dp</string>
     <string name="show_password">Show Password</string>
+    <string name="sign_Up_to_continue">Register to continue</string>
+    <string name="name">Name</string>
+    <string name="your_name">Your Name…</string>
+    <string name="emailhint">Email…</string>
+    <string name="passwordH">Password…</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_have_a_account_sign_in">Already Have a Account? Login</string>
+    <string name="welcome_to_dekut_sales">welcome to dekut sales</string>
+    <string name="user_with_that_email_exists">user with that email exists</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="login">Login</string>
+    <string name="need_new_account_sign_up_here">Need new Account? Register Here</string>
+    <string name="login_to_continue">Login to continue</string>
+
 </resources>

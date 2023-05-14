@@ -1,5 +1,9 @@
+about us web page
+donate
+ our terms
 user account
-    email / google
+    email / google ..later
+    verify email
     business/ personal
     password /forgot password
     follow

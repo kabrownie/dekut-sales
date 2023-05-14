@@ -14,13 +14,19 @@
         android:theme="@style/Theme.DekutSales"
         tools:targetApi="31">
         <activity
+            android:name=".signup"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".myprofile"
             android:exported="false" />
         <activity
             android:name=".dashboard"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
