@@ -15,6 +15,7 @@ import com.dekut.sales.fragments.homeFragment;
 import com.dekut.sales.fragments.profileFragment;
 import com.dekut.sales.fragments.usersFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -30,12 +31,11 @@ public class dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         actionBar = getSupportActionBar();
-        actionBar.setTitle("Profile Activity");
         firebaseAuth = FirebaseAuth.getInstance();
-
         navigationView = findViewById(R.id.navigation);
-        navigationView.setOnNavigationItemSelectedListener(selectedListener);
-        actionBar.setTitle("Home");
+        navigationView.setOnItemSelectedListener(selectedListener);
+        actionBar.setTitle(""+" > "+"Home");
+
 
         // When we open the application first
         // time the fragment should be shown to the user
@@ -46,7 +46,7 @@ public class dashboard extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener selectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+private NavigationBarView.OnItemSelectedListener selectedListener = new NavigationBarView.OnItemSelectedListener() {
 
         @SuppressLint("NonConstantResourceId")
         @Override

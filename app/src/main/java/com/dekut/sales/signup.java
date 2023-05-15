@@ -44,15 +44,14 @@ public class signup extends AppCompatActivity {
    private FirebaseAuth mAuth;
     private EditText email, password, name;
     private ProgressDialog progressDialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Create Account");
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+//        actionBar.setDisplayShowHomeEnabled(true);
+//        actionBar.setDisplayHomeAsUpEnabled(true);
         email = findViewById(R.id.register_email);
         name = findViewById(R.id.register_name);
         password = findViewById(R.id.register_password);
@@ -93,8 +92,11 @@ public class signup extends AppCompatActivity {
                 } else if (pass.length() < 6) {
                     password.setError("Length Must be greater than 6 character");
                     password.setFocusable(true);
-                }
-                else {
+                } else if (!terms.isChecked()) {
+                    terms.setError("");
+                    terms.setFocusable(true);
+
+                } else {
                     registerUser(emaill, pass, uname);
                 }
             }
