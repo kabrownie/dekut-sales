@@ -41,5 +41,15 @@
     <string name="update_password">Update Password</string>
     <string name="old_password">Old Password</string>
     <string name="new_password">New Password</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="upload">Upload</string>
+    <string name="_33_min">33 min</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="_1_2k_likes">1.2K Likes</string>
+    <string name="_1_2k_comment">1.2K Comment</string>
+    <string name="like">Like</string>
+    <string name="comment">COMMENT</string>
 
 </resources>

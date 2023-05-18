@@ -8,12 +8,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-     />
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-       />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -26,6 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DekutSales"
         tools:targetApi="31">
+        <activity
+            android:name=".PostDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragments.PostLikedByActivity"
+            android:exported="false" />
         <activity
             android:name=".edit_profile"
             android:exported="false" />

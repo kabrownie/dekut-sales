@@ -25,3 +25,4 @@ cart
 dark mode/light mode
         online or not/
 android 12+ media storage issue
+deplecated methods to be solved later
