@@ -23,7 +23,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.dekut.sales.fragments.PostLikedByActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -40,7 +39,8 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class AdapterPosts extends RecyclerView.Adapter<com.dekut.sales.AdapterPosts.MyHolder> {
+public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
+
 
     Context context;
     String myuid;
@@ -63,8 +63,6 @@ public class AdapterPosts extends RecyclerView.Adapter<com.dekut.sales.AdapterPo
         View view = LayoutInflater.from(context).inflate(R.layout.row_posts, parent, false);
         return new MyHolder(view);
     }
-
-
 
     @Override
     public void onBindViewHolder(@NonNull final MyHolder holder, @SuppressLint("RecyclerView") final int position) {
@@ -117,6 +115,7 @@ public class AdapterPosts extends RecyclerView.Adapter<com.dekut.sales.AdapterPo
                 liekeref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                         if (mprocesslike) {
                             if (dataSnapshot.child(postid).hasChild(myuid)) {
                                 postref.child(postid).child("plike").setValue("" + (plike - 1));
@@ -154,6 +153,7 @@ public class AdapterPosts extends RecyclerView.Adapter<com.dekut.sales.AdapterPo
     }
 
     private void showMoreOptions(ImageButton more, String uid, String myuid, final String pid, final String image) {
+
         PopupMenu popupMenu = new PopupMenu(context, more, Gravity.END);
         if (uid.equals(myuid)) {
             popupMenu.getMenu().add(Menu.NONE, 0, 0, "DELETE");
@@ -185,9 +185,11 @@ public class AdapterPosts extends RecyclerView.Adapter<com.dekut.sales.AdapterPo
                         for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                             dataSnapshot1.getRef().removeValue();
                         }
+
                         pd.dismiss();
                         Toast.makeText(context, "Deleted Successfully", Toast.LENGTH_LONG).show();
                     }
+
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -206,6 +208,7 @@ public class AdapterPosts extends RecyclerView.Adapter<com.dekut.sales.AdapterPo
         liekeref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 if (dataSnapshot.child(pid).hasChild(myuid)) {
                     holder.likebtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_liked, 0, 0, 0);
                     holder.likebtn.setText("Liked");
@@ -220,6 +223,7 @@ public class AdapterPosts extends RecyclerView.Adapter<com.dekut.sales.AdapterPo
 
             }
         });
+
     }
 
     @Override

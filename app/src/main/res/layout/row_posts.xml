@@ -22,12 +22,12 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/picturetv"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/accountlogo" />
+                android:src="@drawable/ic_account" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -88,8 +88,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="#008EFF"
-                android:text="@string/_1_2k_likes" />
+                android:text="@string/_1_2k_likes"
+                android:textColor="@color/teal_200" />
 
             <TextView
                 android:id="@+id/pcommentco"
@@ -98,7 +98,7 @@
                 android:layout_weight="1"
                 android:text="@string/_1_2k_comment"
                 android:textAlignment="textEnd"
-                android:textColor="#008EFF" />
+                android:textColor="@color/teal_200" />
         </LinearLayout>
 
         <View
@@ -110,7 +110,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-
             android:orientation="horizontal">
 
             <Button
@@ -119,11 +118,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autoLink="all"
-                android:backgroundTint="#2196F3"
+                android:backgroundTint="@color/teal_700"
                 android:drawableStart="@drawable/ic_like"
+                android:drawableLeft="@drawable/ic_liked"
                 android:padding="5dp"
-                android:layout_margin="10dp"
-                android:text="@string/like" />
+                android:text="Like" />
 
             <Button
                 android:id="@+id/comment"
@@ -131,11 +130,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:autoLink="all"
-                android:layout_margin="10dp"
-                android:backgroundTint="#2196F3"
-                android:drawableStart="@drawable/ic_commet"
+                android:backgroundTint="@color/teal_700"
+                android:drawableStart="@drawable/ic_comment"
+                android:drawableLeft="@drawable/ic_comment"
                 android:padding="5dp"
-                android:text="@string/comment" />
+                android:layout_marginLeft="10dp"
+                android:text="COMMENT" />
+
         </LinearLayout>
 
     </LinearLayout>

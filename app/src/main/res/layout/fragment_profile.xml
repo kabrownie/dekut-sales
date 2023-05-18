@@ -32,7 +32,7 @@
                 android:layout_marginTop="100dp"
                 android:orientation="horizontal">
 
-<de.hdodenhof.circleimageview.CircleImageView
+<ImageView
     android:scaleType="centerCrop"
                     android:id="@+id/avatartv"
                     android:layout_width="120dp"
@@ -40,7 +40,8 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="20dp"
                     android:padding="5dp"
-                    android:src="@drawable/accountlogo"
+                    android:background="#2196F3"
+                    android:src="@drawable/ic_account"
     />
 
 
